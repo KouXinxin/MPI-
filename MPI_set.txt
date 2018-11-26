@@ -1,0 +1,13 @@
+1.MPI基本环境
+   https://blog.csdn.net/lusongno1/article/details/61709460
+   测试例程：cd到解压后mpich的examples文件夹下
+      mpicc hellow.c -o hellow 进行编译
+      mpirun --allow-run-as-root -np N hellow
+      #这里的N改成一个常数，表示你要用来运行这个并行程序的节点。当然，如果不是在集群环境上，你一个CPU就一个节点，进程数也就是一个最多，本地机子默认的编号就是0。你N的不同无异于就是把程序跑N遍而已。
+2.MPI_Python环境
+   Cython:$HOME下 pip install cython  && pip install mpi4py
+   测试例程hello_mpi.py
+      mpirun --allow-run-as-root -np N python hello_mpi.py
+
+   Done!OK!
+
